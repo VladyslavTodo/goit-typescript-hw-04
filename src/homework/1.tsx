@@ -12,11 +12,7 @@ export function Observer({ children, onContentEndVisible }: ObserverProps) {
 
     useEffect(() => {
         // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
-        const options: {
-            root?: Element | null;
-            rootMargin?: string;
-            threshold?: number;
-        } = {
+        const options: IntersectionObserverInit = {
             rootMargin: "0px",
             threshold: 1.0,
             root: null,
